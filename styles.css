@@ -15,7 +15,7 @@ body {
 }
 
 #screen {
-  width: 30vw;
+  width: 460px;
   height: 200px;
   margin-bottom: 50px;
   display: grid;
@@ -23,17 +23,18 @@ body {
   color: whitesmoke;
 }
 
-#current-num,
-#previous-num {
-  justify-self: end;
+#currentNum,
+#previousNum {
   align-self: flex-end;
 }
 
-#current-num {
+#currentNum {
+  justify-self: center;
   font-size: 80px;
 }
 
-#previous-num {
+#previousNum {
+  justify-self: end;
   font-size: 20px;
 }
 
@@ -53,7 +54,7 @@ body {
   width: 70px;
   height: 70px;
   margin: 10px 0;
-  background: rgba(2, 2, 2, 0.641);
+  background: rgba(2, 2, 2, 0.4);
   display: flex;
   align-self: center;
   justify-content: center;
@@ -62,26 +63,51 @@ body {
   transition: 0.1s linear;
 }
 
-.number:hover {
+.number,
+#clear,
+.arithmetic,
+#period,
+#equal {
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
 }
 
-.number:active {
-  transform: translateY(5px);
+.number:active,
+#clear:active,
+.arithmetic:active,
+#period:active,
+#equal:active {
+  transform: translateY(3px);
 }
 
 #equal {
-  column-span: 4;
+  grid-column: span 4;
   width: 340px;
   height: 70px;
-  background: rgba(69, 69, 182, 0.575);
+  background: rgba(69, 69, 182, 0.4);
   display: flex;
   align-self: center;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
   border-radius: 4px;
+  transition: 0.1s linear;
+  justify-self: center;
 }
 
 #clear {
-  background: rgba(220, 20, 60, 0.651);
+  background: rgba(220, 20, 60, 0.4);
+}
+.number:hover,
+.arithmetic:hover,
+#period:hover {
+  background: rgba(2, 2, 2, 0.6);
+}
+
+#clear:hover {
+  background: rgba(220, 20, 60, 0.6);
+}
+#equal:hover {
+  background: rgba(69, 69, 182, 0.6);
 }
