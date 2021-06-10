@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(#0a142386, #0a142386),
+    url(https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#screen {
+  width: 30vw;
+  height: 200px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  color: whitesmoke;
+}
+
+#current-num,
+#previous-num {
+  justify-self: end;
+  align-self: flex-end;
+}
+
+#current-num {
+  font-size: 80px;
+}
+
+#previous-num {
+  font-size: 20px;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-auto-rows: auto;
+  justify-content: center;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.number,
+#clear,
+.arithmetic,
+#period {
+  width: 70px;
+  height: 70px;
+  margin: 10px 0;
+  background: rgba(2, 2, 2, 0.641);
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.1s linear;
+}
+
+.number:hover {
+}
+
+.number:active {
+  transform: translateY(5px);
+}
+
+#equal {
+  column-span: 4;
+  width: 340px;
+  height: 70px;
+  background: rgba(69, 69, 182, 0.575);
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+#clear {
+  background: rgba(220, 20, 60, 0.651);
+}
