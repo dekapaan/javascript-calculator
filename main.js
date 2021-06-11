@@ -88,27 +88,29 @@ function operation(e) {
   if (currentScreen.innerHTML == "") {
     currentScreen.innerHTML = 0;
   } else if (operand == "+") {
-    answer = parseInt(secondNum) + parseInt(firstNum);
+    answer = Number(secondNum) + Number(firstNum);
     currentScreen.innerHTML - "";
     currentScreen.innerHTML = answer;
     operand = "";
   } else if (operand == "-") {
-    answer = parseInt(secondNum) - parseInt(firstNum);
+    answer = Number(secondNum) - Number(firstNum);
     currentScreen.innerHTML - "";
     currentScreen.innerHTML = answer;
     operand = "";
   } else if (operand == "/") {
-    answer = parseInt(secondNum) / parseInt(firstNum);
+    answer = Number(secondNum) / Number(firstNum);
     currentScreen.innerHTML - "";
     currentScreen.innerHTML = answer;
     operand = "";
   } else if (operand == "x") {
-    answer = parseInt(secondNum) * parseInt(firstNum);
+    console.log(`${firstNum}, ${secondNum}`);
+    answer = Number(secondNum) * Number(firstNum);
     currentScreen.innerHTML = "";
     currentScreen.innerHTML = answer;
     operand = "";
   }
   firstNum = currentScreen.innerHTML;
   previousScreen.innerHTML = "";
+  console.log(answer);
   return answer;
 }
