@@ -15,9 +15,9 @@ body {
 }
 
 #screen {
-  width: 460px;
-  height: 200px;
-  margin-bottom: 50px;
+  width: 400px;
+  height: 150px;
+  margin-bottom: 30px;
   display: grid;
   grid-template-rows: 70px 1fr;
   color: whitesmoke;
@@ -36,6 +36,7 @@ body {
 
 #previousNum {
   justify-self: end;
+  align-self: center;
   font-size: 20px;
 }
 
