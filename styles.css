@@ -31,6 +31,7 @@ body {
 #currentNum {
   justify-self: center;
   font-size: 80px;
+  overflow-x: auto;
 }
 
 #previousNum {
@@ -41,7 +42,6 @@ body {
 #buttons {
   display: grid;
   grid-template-columns: repeat(4, 90px);
-  grid-auto-rows: auto;
   justify-content: center;
   text-align: center;
   color: whitesmoke;
