@@ -35,7 +35,6 @@ function append(e) {
     firstNum = "";
     firstNum += e.target.innerHTML;
     currentScreen.innerHTML += e.target.innerHTML;
-    console.log(currentScreen.innerHTML);
   } else if (currentScreen.innerHTML == "0" && e.target.innerHTML == "0") {
     firstNum;
     currentScreen;
@@ -70,9 +69,11 @@ function clear() {
 
 function changescreen(e) {
   if (operand !== "") {
-    previousScreen.innerHTML = operation() + e.target.innerHTML;
+    secondNum = operation();
+    previousScreen.innerHTML = secondNum + e.target.innerHTML;
     currentScreen.innerHTML = "";
     firstNum = "";
+    operand = e.target.innerHTML;
   } else {
     operand = e.target.innerHTML;
     secondNum = firstNum;
@@ -91,26 +92,20 @@ function operation(e) {
     answer = Number(secondNum) + Number(firstNum);
     currentScreen.innerHTML - "";
     currentScreen.innerHTML = answer;
-    operand = "";
   } else if (operand == "-") {
     answer = Number(secondNum) - Number(firstNum);
     currentScreen.innerHTML - "";
     currentScreen.innerHTML = answer;
-    operand = "";
   } else if (operand == "/") {
     answer = Number(secondNum) / Number(firstNum);
     currentScreen.innerHTML - "";
     currentScreen.innerHTML = answer;
-    operand = "";
   } else if (operand == "x") {
-    console.log(`${firstNum}, ${secondNum}`);
     answer = Number(secondNum) * Number(firstNum);
     currentScreen.innerHTML = "";
     currentScreen.innerHTML = answer;
-    operand = "";
   }
   firstNum = currentScreen.innerHTML;
   previousScreen.innerHTML = "";
-  console.log(answer);
   return answer;
 }
