@@ -15,7 +15,7 @@ body {
 }
 
 #screen {
-  width: 400px;
+  width: clamp(300px, 5vw, 400px);
   height: 150px;
   margin-bottom: 30px;
   display: grid;
@@ -42,7 +42,7 @@ body {
 
 #buttons {
   display: grid;
-  grid-template-columns: repeat(4, 90px);
+  grid-template-columns: repeat(4, 80px);
   justify-content: center;
   text-align: center;
   color: whitesmoke;
@@ -52,8 +52,8 @@ body {
 #clear,
 .arithmetic,
 #period {
-  width: 70px;
-  height: 70px;
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
   margin: 10px 0;
   background: rgba(2, 2, 2, 0.4);
   display: flex;
@@ -84,8 +84,8 @@ body {
 
 #equal {
   grid-column: span 4;
-  width: 340px;
-  height: 70px;
+  width: 96%;
+  height: clamp(50px, 5vw, 70px);
   background: rgba(69, 69, 182, 0.4);
   display: flex;
   align-self: center;
